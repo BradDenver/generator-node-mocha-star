@@ -23,10 +23,11 @@ NodeMochaStarGenerator.prototype.askFor = function askFor() {
   console.log(this.yeoman);
 
   var prompts = [{
-    type: 'confirm',
-    name: 'someOption',
-    message: 'Would you like to enable this option?',
-    default: true
+    type: 'list',
+    name: 'assertionLib',
+    message: 'Which assertion library would you like to use?',
+    choices: ['assert','chai','should.js'],
+    default: 1
   }];
 
   this.prompt(prompts, function (props) {
