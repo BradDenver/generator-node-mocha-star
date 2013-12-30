@@ -1,47 +1,32 @@
-# generator-node-mocha-star [![Build Status](https://secure.travis-ci.org/braddenver/generator-node-mocha-star.png?branch=master)](https://travis-ci.org/braddenver/generator-node-mocha-star)
+# Node-Mocha-Star Generator [![Build Status](https://secure.travis-ci.org/braddenver/generator-node-mocha-star.png?branch=master)](https://travis-ci.org/braddenver/generator-node-mocha-star)
 
-A generator for [Yeoman](http://yeoman.io).
+> Create a node.js module with [Yeoman](http://yeoman.io/), including Mocha unit tests, with the assertion library of your choice.
+
+## Installation
+
+Install the generator by running: `npm install -g generator-node-mocha-star`.
 
 
-## Getting Started
+## Usage
 
-### What is Yeoman?
-
-Trick question. It's not a thing. It's this guy:
-
-![](http://i.imgur.com/JHaAlBJ.png)
-
-Basically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.
-
-Not every new computer comes with a Yeoman pre-installed. He lives in the [npm](https://npmjs.org) package repository. You only have to ask for him once, then he packs up and moves into your hard drive. *Make sure you clean up, he likes new and shiny things.*
+At the command-line, cd into an empty directory, run this command and follow the prompts.
 
 ```
-$ npm install -g yo
+yo node-mocha-star
 ```
 
-### Yeoman Generators
+_Note that this template will generate files in the current directory, so be sure to change to a new directory first if you don't want to overwrite existing files._
 
-Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
 
-To install generator-node-mocha-star from npm, run:
+## Credits
+This generator is a fork of [generator-node-mocha](https://github.com/yeoman/generator-node) (supporting Mocha unit tests instead of NodeUnit) which is in turn a fork of [generator-node](https://github.com/yeoman/generator-node) by the Yeoman team.
 
-```
-$ npm install -g generator-node-mocha-star
-```
+Author: [Brad Denver](https://github.com/BradDenver)
 
-Finally, initiate the generator:
-
-```
-$ yo node-mocha-star
-```
-
-### Getting To Know Yeoman
-
-Yeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.
-
-If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
+Original Authors: [Akshay Katyal](https://github.com/MrDHat), [Addy Osmani](https://github.com/addyosmani)
 
 
 ## License
 
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
+

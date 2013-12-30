@@ -79,12 +79,12 @@ NodeMochaStarGenerator.prototype.askFor = function askFor() {
 
 NodeMochaStarGenerator.prototype.lib = function lib() {
   this.mkdir('lib');
-  this.template('lib/name.js', 'lib/' + this.slugname + '.js');
+  this.template('lib/_name.js', 'lib/' + this.slugname + '.js');
 };
 
 NodeMochaStarGenerator.prototype.test = function test() {
   this.mkdir('test');
-  this.template('test/name_test.js', 'test/' + this.slugname + '_test.js');
+  this.template('test/_name_test.js', 'test/' + this.slugname + '_test.js');
 };
 
 NodeMochaStarGenerator.prototype.projectfiles = function projectfiles() {
@@ -93,7 +93,7 @@ NodeMochaStarGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('gitignore', '.gitignore');
   this.copy('travis.yml', '.travis.yml');
 
-  this.template('README.md');
-  this.template('Gruntfile.js');
+  this.template('_README.md', 'README.md');
+  this.template('_Gruntfile.js', 'Gruntfile.js');
   this.template('_package.json', 'package.json');
 };
