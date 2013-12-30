@@ -3,16 +3,18 @@
 module.exports = function (grunt) {
   // Show elapsed time at the end
   require('time-grunt')(grunt);
-  // Load all grunt tasks
+  
+  // load all grunt tasks matching the `grunt-*` pattern
   require('load-grunt-tasks')(grunt);
 
   // Project configuration.
   grunt.initConfig({
     mochaTest: {
-     options: {
-	ui: 'tdd'
-     }, 
-     test: {
+      options: {
+        reporter: 'spec',
+        ui: 'tdd'
+      }, 
+      test: {
         src: ['test/**/*.js']
       }
     },
