@@ -20,9 +20,39 @@ NodeMochaStarGenerator.prototype.askFor = function askFor() {
   var cb = this.async();
 
   // have Yeoman greet the user.
-  console.log(this.yeoman);
+  console.log(
+    this.yeoman +
+    '\nThe name of your project shouldn\'t contain "node" or "js" and' +
+    '\nshould be a unique ID not already in use at search.npmjs.org.');
 
   var prompts = [{
+    name: 'name',
+    message: 'Module Name',
+    default: path.basename(process.cwd())
+  }, {
+    name: 'description',
+    message: 'Description',
+    default: 'The best module ever.'
+  }, /*{
+    name: 'homepage',
+    message: 'Homepage'
+  }, {
+    name: 'license',
+    message: 'License',
+    default: 'MIT'
+  }, {
+    name: 'githubUsername',
+    message: 'GitHub username'
+  }, {
+    name: 'authorName',
+    message: 'Author\'s Name'
+  }, {
+    name: 'authorEmail',
+    message: 'Author\'s Email'
+  }, {
+    name: 'authorUrl',
+    message: 'Author\'s Homepage'
+  },*/ {
     type: 'list',
     name: 'assertionLib',
     message: 'Which assertion library would you like to use?',
@@ -30,22 +60,40 @@ NodeMochaStarGenerator.prototype.askFor = function askFor() {
     default: 1
   }];
 
+  this.currentYear = (new Date()).getFullYear();
+
   this.prompt(prompts, function (props) {
-    this.someOption = props.someOption;
+    this.slugname = this._.slugify(props.name);
+
+    this.repoUrl = 'https://github.com/' + props.githubUsername + '/' + this.slugname;
+
+    if (!props.homepage) {
+      props.homepage = this.repoUrl;
+    }
+
+    this.props = props;
 
     cb();
   }.bind(this));
 };
 
-NodeMochaStarGenerator.prototype.app = function app() {
-  this.mkdir('app');
-  this.mkdir('app/templates');
+NodeMochaStarGenerator.prototype.lib = function lib() {
+  this.mkdir('lib');
+  this.template('lib/name.js', 'lib/' + this.slugname + '.js');
+};
 
-  this.copy('_package.json', 'package.json');
-  this.copy('_bower.json', 'bower.json');
+NodeMochaStarGenerator.prototype.test = function test() {
+  this.mkdir('test');
+  this.template('test/name_test.js', 'test/' + this.slugname + '_test.js');
 };
 
 NodeMochaStarGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('editorconfig', '.editorconfig');
   this.copy('jshintrc', '.jshintrc');
+  this.copy('gitignore', '.gitignore');
+  this.copy('travis.yml', '.travis.yml');
+
+  this.template('README.md');
+  this.template('Gruntfile.js');
+  this.template('_package.json', 'package.json');
 };
