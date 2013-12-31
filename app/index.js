@@ -56,7 +56,7 @@ NodeMochaStarGenerator.prototype.askFor = function askFor() {
     type: 'list',
     name: 'assertionLib',
     message: 'Which assertion library would you like to use?',
-    choices: ['assert','chai','expect.js','should.js'],
+    choices: ['assert','chai-assert','expect.js','should.js'],
     default: 1
   }];
 

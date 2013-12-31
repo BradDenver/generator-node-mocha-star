@@ -12,7 +12,7 @@
   "eqnull": true,
   "node": true,
   "globals"   : {
-      <% if(props.assertionLib==='expect.js'){ %>
+      <% if(props.assertionLib==='expect.js' || props.assertionLib==='should.js'){ %>
       /* expect.js, should.js */
       "describe": false,
       "it": false,

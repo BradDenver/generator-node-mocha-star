@@ -20,8 +20,12 @@
     }
   ],
   "devDependencies": {
-    <% if(props.assertionLib==='expect.js'){ %>
+    <% if(props.assertionLib==='chai-assert'){ %>
+    "chai": "*",
+    <% } else if(props.assertionLib==='expect.js'){ %>
     "expect.js": "*",
+    <% } else if(props.assertionLib==='should.js'){ %>
+    "should": "*",
     <% } %>
     "grunt-contrib-jshint": "~0.6.0",
     "grunt-contrib-watch": "~0.5.0",

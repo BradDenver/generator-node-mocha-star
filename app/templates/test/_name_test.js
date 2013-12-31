@@ -17,6 +17,17 @@ suite('AwesomenessTest', function(){
   });
 });
 
+<% } else if(props.assertionLib==='chai-assert'){ %>
+
+var assert = require('chai').assert;
+
+suite('AwesomenessTest', function(){
+  test('#awesome()', function(done){
+    assert.equal(<%= slugname %>.awesome(), 'awesome');
+    done();
+  });
+});
+
 <% } else if(props.assertionLib==='expect.js'){ %>
 
 var expect = require('expect.js');
@@ -24,6 +35,17 @@ var expect = require('expect.js');
 describe('AwesomenessTest', function () {
   it('shoud return awesome from #awesome()', function () {
     expect(<%= slugname %>.awesome()).to.equal('awesome');
+  });
+});
+
+<% } else if(props.assertionLib==='should.js'){ %>
+
+/*var should = */require('should');
+
+describe('AwesomenessTest', function(){
+  it('shoud return awesome from #awesome()', function(done){
+    <%= slugname %>.awesome().should.equal('awesome');
+    done();
   });
 });
 
