@@ -20,7 +20,7 @@
     }
   ],
   "devDependencies": {
-    <% if(props.assertionLib==='chai-assert'){ %>
+    <% if(props.assertionLib==='chai-assert' || props.assertionLib==='chai-expect' || props.assertionLib==='chai-should'){ %>
     "chai": "*",
     <% } else if(props.assertionLib==='expect.js'){ %>
     "expect.js": "*",

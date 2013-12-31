@@ -12,8 +12,8 @@
   "eqnull": true,
   "node": true,
   "globals"   : {
-      <% if(props.assertionLib==='expect.js' || props.assertionLib==='should.js'){ %>
-      /* expect.js, should.js */
+      <% if(props.assertionLib==='chai-expect' || props.assertionLib==='chai-should' || props.assertionLib==='expect.js' || props.assertionLib==='should.js'){ %>
+      /* chai bdd, expect.js, should.js */
       "describe": false,
       "it": false,
       <% } %>

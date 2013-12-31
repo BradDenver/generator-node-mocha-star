@@ -15,6 +15,7 @@ suite('AwesomenessTest', function(){
     assert.equal(<%= slugname %>.awesome(), 'awesome');
     done();
   });
+  test('is pending implementation');
 });
 
 <% } else if(props.assertionLib==='chai-assert'){ %>
@@ -26,6 +27,18 @@ suite('AwesomenessTest', function(){
     assert.equal(<%= slugname %>.awesome(), 'awesome');
     done();
   });
+  test('is pending implementation');
+});
+
+<% } else if(props.assertionLib==='chai-expect'){ %>
+
+var expect = require('chai').expect;
+
+describe('AwesomenessTest', function () {
+  it('shoud return awesome from #awesome()', function () {
+    expect(<%= slugname %>.awesome()).to.equal('awesome');
+  });
+  it('is pending implementation');
 });
 
 <% } else if(props.assertionLib==='expect.js'){ %>
@@ -36,6 +49,7 @@ describe('AwesomenessTest', function () {
   it('shoud return awesome from #awesome()', function () {
     expect(<%= slugname %>.awesome()).to.equal('awesome');
   });
+  it('is pending implementation');
 });
 
 <% } else if(props.assertionLib==='should.js'){ %>
@@ -47,6 +61,7 @@ describe('AwesomenessTest', function(){
     <%= slugname %>.awesome().should.equal('awesome');
     done();
   });
+  it('is pending implementation');
 });
 
 <% } %>

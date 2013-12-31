@@ -16,103 +16,91 @@
 
     // Asserts non-strict equality (==) of actual and expected
     assert.equal(actual, expected, [message])
-    .notEqual(actual, expected, [message])
+    assert.notEqual(actual, expected, [message])
 
     // Asserts strict equality (===) of actual and expected
-    .strictEqual(actual, expected, [message])
-    .notStrictEqual(actual, expected, [message])
+    assert.strictEqual(actual, expected, [message])
+    assert.notStrictEqual(actual, expected, [message])
 
     // Asserts that actual is deeply equal to expected
-    .deepEqual(actual, expected, [message])
-    .notDeepEqual(actual, expected, [message])
+    assert.deepEqual(actual, expected, [message])
+    assert.notDeepEqual(actual, expected, [message])
 
-    // Asserts that value is true
-    .isTrue(value, [message])
-    .isFalse(value, [message])
+    // Asserts that value is true/false/null/undefined
+    assert.isTrue(value, [message])
+    assert.isFalse(value, [message])
+    assert.isNull(value, [message])
+    assert.isNotNull(value, [message])
+    assert.isUndefined(value, [message])
+    assert.isDefined(value, [message])
 
-    // Asserts that value is null
-    .isNull(value, [message])
-    .isNotNull(value, [message])
-
-    // Asserts that value is undefined
-    .isUndefined(value, [message])
-    .isDefined(value, [message])
-
-    // Asserts that value is a function
-    .isFunction(value, [message])
-    .isNotFunction(value, [message])
+    // Asserts that value is a function/array/string/number/boolean
+    assert.isFunction(value, [message])
+    assert.isNotFunction(value, [message])
+    assert.isArray(value, [message])
+    assert.isNotArray(value, [message])
+    assert.isString(value, [message])
+    assert.isNotString(value, [message])
+    assert.isNumber(value, [message])
+    assert.isNotNumber(value, [message])
+    assert.isBoolean(value, [message])
+    assert.isNotBoolean(value, [message])
 
     // Asserts that value is an object (as revealed by Object.prototype.toString)
-    .isObject(value, [message])
-    .isNotObject(value, [message])
-
-    // Asserts that value is an array
-    .isArray(value, [message])
-    .isNotArray(value, [message])
-
-    // Asserts that value is a string
-    .isString(value, [message])
-    .isNotString(value, [message])
-
-    // Asserts that value is a number
-    .isNumber(value, [message])
-    .isNotNumber(value, [message])
-
-    // Asserts that value is a boolean
-    .isBoolean(value, [message])
-    .isNotBoolean(value, [message])
+    assert.isObject(value, [message])
+    assert.isNotObject(value, [message])
 
     //Asserts that value's type is name, as determined by Object.prototype.toString
-    .typeOf(value, name, [message])
-    .notTypeOf(value, name, [message])
+    assert.typeOf(value, name, [message])
+    assert.notTypeOf(value, name, [message])
 
     // Asserts that value is an instance of constructor
-    .instanceOf(object, constructor, [message])
-    .notInstanceOf(object, constructor, [message])
+    assert.instanceOf(object, constructor, [message])
+    assert.notInstanceOf(object, constructor, [message])
 
     // Asserts that haystack includes needle. Works for strings and arrays
-    .include(haystack, needle, [message])
-    .notInclude(haystack, needle, [message])
+    assert.include(haystack, needle, [message])
+    assert.notInclude(haystack, needle, [message])
 
     // Asserts that value matches the regular expression regexp
-    .match(value, regexp, [message])
-    .notMatch(value, regexp, [message])
+    assert.match(value, regexp, [message])
+    assert.notMatch(value, regexp, [message])
 
     // Asserts that object has a property named by property
-    .property(object, property, [message])
-    .notProperty(object, property, [message])
+    assert.property(object, property, [message])
+    assert.notProperty(object, property, [message])
 
 
     // Asserts that object has a property named by property, which can be a string using dot- and bracket-notation for deep reference
-    .deepProperty(object, property, [message])
-    .notDeepProperty(object, property, [message])
+    assert.deepProperty(object, property, [message])
+    assert.notDeepProperty(object, property, [message])
 
     // Asserts that object has a property named by property with value given by value
-    .propertyVal(object, property, value, [message])
-    .propertyNotVal(object, property, value, [message])
+    assert.propertyVal(object, property, value, [message])
+    assert.propertyNotVal(object, property, value, [message])
 
     //Asserts that object has a property named by property with value given by value. property can use dot- and bracket-notation for deep reference
-    .deepPropertyVal(object, property, value, [message])
-    .deepPropertyNotVal(object, property, value, [message])
+    assert.deepPropertyVal(object, property, value, [message])
+    assert.deepPropertyNotVal(object, property, value, [message])
 
     // Asserts that object has a length property with the expected value
-    .lengthOf(object, length, [message])
+    assert.lengthOf(object, length, [message])
 
     //Asserts that function will throw an error that is an instance of constructor, or alternately that it will throw an error with message matching regexp
-    .throws(function, [constructor/string/regexp], [string/regexp], [message])
-    .doesNotThrow(function, [constructor/regexp], [message])
+    assert.throws(function, [constructor/string/regexp], [string/regexp], [message])
+    assert.doesNotThrow(function, [constructor/regexp], [message])
 
     // Compares two values using operator
-    .operator(val1, operator, val2, [message])
+    assert.operator(val1, operator, val2, [message])
 
     // Asserts that the target is equal expected, to within a +/- delta range
-    .closeTo(actual, expected, delta, [message])
+    assert.closeTo(actual, expected, delta, [message])
 
     // Asserts that set1 and set2 have the same members. Order is not taken into account
-    .sameMembers(set1, set2, [message])
+    assert.sameMembers(set1, set2, [message])
 
     // Asserts that subset is included in superset. Order is not taken into account
-    .includeMembers(superset, subset, [message])
+    assert.includeMembers(superset, subset, [message])
     
 
     Apart from assert, Mocha allows you to use any of the following assertion libraries:
