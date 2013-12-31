@@ -12,6 +12,11 @@
   "eqnull": true,
   "node": true,
   "globals"   : {
+      <% if(props.assertionLib==='expect.js'){ %>
+      /* expect.js, should.js */
+      "describe": false,
+      "it": false,
+      <% } %>
       /* MOCHA */
       "suite": false,
       "test": false,

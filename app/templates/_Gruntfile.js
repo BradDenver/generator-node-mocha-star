@@ -12,7 +12,11 @@ module.exports = function (grunt) {
     mochaTest: {
       options: {
         reporter: 'spec',
+        <% if(props.assertionLib==='assert'){ %>
         ui: 'tdd'
+        <% } else { %>
+        ui: 'bdd'
+        <% } %>
       }, 
       test: {
         src: ['test/**/*.js']

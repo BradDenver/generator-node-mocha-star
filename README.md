@@ -21,6 +21,8 @@ _Note that this template will generate files in the current directory, so be sur
 ## Credits
 This generator is a fork of [generator-node-mocha](https://github.com/yeoman/generator-node) (supporting Mocha unit tests instead of NodeUnit) which is in turn a fork of [generator-node](https://github.com/yeoman/generator-node) by the Yeoman team.
 
+The should.js guide was taken from [grunt-initconfig](https://github.com/pismute/grunt-initconfig/blob/master/src/test/initconfig-test.coffee)
+
 Author: [Brad Denver](https://github.com/BradDenver)
 
 Original Authors: [Akshay Katyal](https://github.com/MrDHat), [Addy Osmani](https://github.com/addyosmani)

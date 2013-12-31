@@ -20,6 +20,9 @@
     }
   ],
   "devDependencies": {
+    <% if(props.assertionLib==='expect.js'){ %>
+    "expect.js": "*",
+    <% } %>
     "grunt-contrib-jshint": "~0.6.0",
     "grunt-contrib-watch": "~0.5.0",
     "grunt-mocha-test": "~0.7.0",

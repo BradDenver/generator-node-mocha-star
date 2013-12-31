@@ -56,7 +56,7 @@ NodeMochaStarGenerator.prototype.askFor = function askFor() {
     type: 'list',
     name: 'assertionLib',
     message: 'Which assertion library would you like to use?',
-    choices: ['assert','chai','should.js'],
+    choices: ['assert','chai','expect.js','should.js'],
     default: 1
   }];
 
@@ -83,17 +83,19 @@ NodeMochaStarGenerator.prototype.lib = function lib() {
 };
 
 NodeMochaStarGenerator.prototype.test = function test() {
+  this.assertionGuide = this.readFileAsString(path.join(this.sourceRoot(), '/test/_' + this._.slugify(this.props.assertionLib) + '.js'));
+//console.log(this._.slugify('should.js'));
   this.mkdir('test');
   this.template('test/_name_test.js', 'test/' + this.slugname + '_test.js');
 };
 
 NodeMochaStarGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('editorconfig', '.editorconfig');
-  this.copy('jshintrc', '.jshintrc');
   this.copy('gitignore', '.gitignore');
   this.copy('travis.yml', '.travis.yml');
 
-  this.template('_README.md', 'README.md');
   this.template('_Gruntfile.js', 'Gruntfile.js');
+  this.template('_jshintrc', '.jshintrc');
   this.template('_package.json', 'package.json');
+  this.template('_README.md', 'README.md');
 };
