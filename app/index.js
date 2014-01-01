@@ -33,7 +33,7 @@ NodeMochaStarGenerator.prototype.askFor = function askFor() {
     name: 'description',
     message: 'Description',
     default: 'The best module ever.'
-  }, /*{
+  }, {
     name: 'homepage',
     message: 'Homepage'
   }, {
@@ -52,7 +52,13 @@ NodeMochaStarGenerator.prototype.askFor = function askFor() {
   }, {
     name: 'authorUrl',
     message: 'Author\'s Homepage'
-  },*/ {
+  }, {
+    type: 'list',
+    name: 'reporter',
+    message: 'Which Mocha reporter would you like to use?',
+    choices: ['dot','spec','nyan','tap','landing','list', 'progress', 'json', 'json-stream', 'json-cov', 'html-cov', 'min', 'doc', 'xunit', 'markdown'/*, 'html'*/],
+    default: 1
+  }, {
     type: 'list',
     name: 'assertionLib',
     message: 'Which assertion library would you like to use?',

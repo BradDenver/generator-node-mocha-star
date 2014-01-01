@@ -11,7 +11,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     mochaTest: {
       options: {
-        reporter: 'spec',
+        reporter: '<%= props.reporter %>',
         <% if(props.assertionLib==='assert' || props.assertionLib==='chai-assert' ){ %>
         ui: 'tdd'
         <% } else { %>
