@@ -1,4 +1,4 @@
-# Node-Mocha-Star Generator [![Build Status](https://secure.travis-ci.org/braddenver/generator-node-mocha-star.png?branch=master)](https://travis-ci.org/braddenver/generator-node-mocha-star)
+# Node-Mocha-Star Generator [![Build Status](https://secure.travis-ci.org/BradDenver/generator-node-mocha-star.png?branch=master)](https://travis-ci.org/BradDenver/generator-node-mocha-star)
 
 > Create a node.js module with [Yeoman](http://yeoman.io/), including Mocha unit tests, with the assertion library of your choice.
 
