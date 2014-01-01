@@ -1,15 +1,19 @@
 {
   "name": "generator-node-mocha-star",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A generator for Yeoman",
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "mocha",
+    "chai",
+    "expect.js",
+    "should.js"
   ],
   "homepage": "https://github.com/BradDenver/generator-node-mocha-star",
   "bugs": "https://github.com/BradDenver/generator-node-mocha-star/issues",
   "author": {
-    "name": "",
-    "email": "",
+    "name": "Brad Denver",
+    "email": "open@braddenver.com",
     "url": "https://github.com/BradDenver"
   },
   "main": "app/index.js",
