@@ -35,8 +35,27 @@ suite('AwesomenessTest', function(){
 var expect = require('chai').expect;
 
 describe('AwesomenessTest', function () {
-  it('shoud return awesome from #awesome()', function () {
+  it('should return awesome from #awesome()', function () {
     expect(<%= slugname %>.awesome()).to.equal('awesome');
+  });
+  it('is pending implementation');
+});
+
+<% } else if(props.assertionLib==='chai-should'){ %>
+
+/*jshint expr: true*/
+var should = require('chai').should();
+
+// by testing for the existance of should we prevent jshint throwing: 'should' is defined but never used.
+describe('Should Assertion Test', function () {
+  it('should have a should variable', function () {
+    should.exist(should);
+  });
+});
+
+describe('AwesomenessTest', function () {
+  it('should return awesome from #awesome()', function () {
+    <%= slugname %>.awesome().should.equal('awesome');
   });
   it('is pending implementation');
 });
@@ -46,7 +65,7 @@ describe('AwesomenessTest', function () {
 var expect = require('expect.js');
 
 describe('AwesomenessTest', function () {
-  it('shoud return awesome from #awesome()', function () {
+  it('should return awesome from #awesome()', function () {
     expect(<%= slugname %>.awesome()).to.equal('awesome');
   });
   it('is pending implementation');
@@ -54,10 +73,18 @@ describe('AwesomenessTest', function () {
 
 <% } else if(props.assertionLib==='should.js'){ %>
 
-/*var should = */require('should');
+/*jshint expr: true*/
+var should = require('should');
+
+// by testing for the existance of should we prevent jshint throwing: 'should' is defined but never used.
+describe('Should Assertion Test', function () {
+  it('should have a should variable', function () {
+    should.exist(should);
+  });
+});
 
 describe('AwesomenessTest', function(){
-  it('shoud return awesome from #awesome()', function(done){
+  it('should return awesome from #awesome()', function(done){
     <%= slugname %>.awesome().should.equal('awesome');
     done();
   });

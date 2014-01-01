@@ -57,7 +57,7 @@ NodeMochaStarGenerator.prototype.askFor = function askFor() {
     name: 'assertionLib',
     message: 'Which assertion library would you like to use?',
     choices: ['assert','chai-assert','chai-expect','chai-should','expect.js','should.js'],
-    default: 1
+    default: 0
   }];
 
   this.currentYear = (new Date()).getFullYear();
