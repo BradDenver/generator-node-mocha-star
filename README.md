@@ -1,4 +1,4 @@
-# Node-Mocha-Star Generator [![Build Status](https://secure.travis-ci.org/BradDenver/generator-node-mocha-star.png?branch=master)](https://travis-ci.org/BradDenver/generator-node-mocha-star)
+# Node-Mocha-Star Generator [![Build Status](https://secure.travis-ci.org/BradDenver/generator-node-mocha-star.png?branch=master)](https://travis-ci.org/BradDenver/generator-node-mocha-star) [![Analytics](https://ga-beacon.appspot.com/UA-40041520-3/generator-node-mocha-star/readme)](https://github.com/igrigorik/ga-beacon)
 
 > Create a node.js module with [Yeoman](http://yeoman.io/), including Mocha unit tests, with the assertion library of your choice.
 
@@ -48,4 +48,5 @@ Original Authors: [Akshay Katyal](https://github.com/MrDHat), [Addy Osmani](http
 ## License
 
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
+
 
