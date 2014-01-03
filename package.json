@@ -1,25 +1,24 @@
 {
   "name": "generator-node-mocha-star",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "A node generator for Yeoman with Mocha unit tests and choice of assertion library",
   "keywords": [
     "yeoman-generator",
+    "scaffold",
     "mocha",
     "chai",
     "expect.js",
     "should.js"
   ],
   "homepage": "https://github.com/BradDenver/generator-node-mocha-star",
-  "bugs": "https://github.com/BradDenver/generator-node-mocha-star/issues",
-  "author": {
-    "name": "Brad Denver",
-    "email": "open@braddenver.com",
-    "url": "https://github.com/BradDenver"
+  "bugs": {
+    "url": "https://github.com/BradDenver/generator-node-mocha-star/issues"
   },
+  "author": "Brad Denver <open@braddenver.com> (https://github.com/BradDenver)",
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/BradDenver/generator-node-mocha-star.git"
+    "url": "https://github.com/BradDenver/generator-node-mocha-star.git"
   },
   "scripts": {
     "test": "mocha"
@@ -37,9 +36,5 @@
     "node": ">=0.8.0",
     "npm": ">=1.2.10"
   },
-  "licenses": [
-    {
-      "type": "MIT"
-    }
-  ]
+  "license": "MIT"
 }
